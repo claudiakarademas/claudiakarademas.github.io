@@ -1,99 +1,54 @@
+* {
+/* These are my default settings for everything. I set margin and padding to 0 so they can all be manually set if desired. The others I just took, we'll have to look into them. */
+  margin: 0;
+  padding: 0;
+  box-sixing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Here, I set my background color for the page. */
 body {
-    background-color: black;
-    font-family: Helvetica;
-    color: seashell;
-    opacity: 0.9;
-    font-size: 22px;
-    text-align: center;
+  background-color: #edf3f7;
 }
 
-header {
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-between;
+/* Here, I set up my navpanel div. It's fixed, so it moves as you scroll. The width is 200, and the height is always the full page. */
+.navpanel {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: #cfe2f3;
 }
 
-.logo {
-    height: 50px;
-    margin: 10px;
-}
-
-.nav li {
-    display: inline-block;
-    margin-left: 20px;
-    text-decoration: underline;
-}
-a {
-    color: inherit  ;
-}
-
-.container1 {
-    display: flex;
-    height: 700px;
-    background-image: url("../Resources/background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    flex-direction: column;
-    justify-content: center;
+/* This creates a bit of spacing between the list items in the navigation panel. */
+.navpanel li {
+   padding: 5px 10px;
 
 }
-.block1 {
-    background-color: black;
-}
 
-/* Pictures Flexbox Section Start*/
-
-
-
-.teapiccontainer {
-    margin: auto;
-    max-width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* This changes the background color of the list items when you hover over them.*/
+.navpanel li:hover {
+   background-color: #a4c2f4;
 
 }
-figure {
-    margin: 10px;
-}
-figcaption {
-    margin-top: 10px;
-}
-.teapics  {
-    width: 300px;
-    height: 200px;
+
+/* This sets the color of the links to be black always. The display: block also makes sure they take up the full space of the list item, not just over the text.*/
+.navpanel li a{
+   color: black;
+   display: block;
+
 }
 
-/* Pictures Flexbox Section Finish*/
-
-.location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Here, I change the size and spacing of my home button*/
+#homebutton {
+  height: 120px;
+  padding-left: 40px;
 }
 
-.container2 {
-    background-image: url("../Resources/locations.png");
-    background-repeat: no-repeat;
-    background-position:center;
-    height: 500px;
-}
-.address {
-    width: 300px;
-    height: 300px;
-    background-color: black;;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 15px;
-    opacity: 1;
-    line-height: 2.5;
-}
 
-.container2 h2 {
-    padding-top: 60px;
-    margin-bottom: 0;
-}
+/* Here, I move my main content over 200px so it does not overlap with the nav panel. I also set it to take the full width of the page.*/
+.content {
+ padding-left: 200px;
+ width: 100%
 
-.left {
-    text-align: left;
 }
